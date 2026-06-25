@@ -34,9 +34,9 @@ management:
     health:
       show-details: always
 
-resend:
-  api-key: ${RESEND_API_KEY:re_placeholder_key}
-  from-email: ${RESEND_FROM_EMAIL:onboarding@resend.dev}
+ses:
+  from-email: ${SES_FROM_EMAIL:jevojob@gmail.com}
+  region: ${SES_REGION:us-east-1}
 
 logging:
   level:
