@@ -26,7 +26,7 @@ public class SumController {
     @PostMapping("/sum")
     @Operation(
         summary = "Suma dos números, persiste el resultado y envía email",
-        description = "Demuestra validación Bean Validation, persistencia JPA y envío de email con Resend SDK"
+        description = "Valida los campos con Bean Validation, persiste el resultado en PostgreSQL y envía un email con AWS SES"
     )
     public ResponseEntity<SumResponseDTO> sum(@Valid @RequestBody SumRequestDTO request) {
         return ResponseEntity.ok(sumService.sum(request));

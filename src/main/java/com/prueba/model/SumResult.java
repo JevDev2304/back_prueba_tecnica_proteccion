@@ -1,14 +1,16 @@
 package com.prueba.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "sum_results")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 public class SumResult {
 

@@ -33,6 +33,7 @@ public class SumServiceImpl implements SumService {
         SumResult sumResult = new SumResult(request.getA(), request.getB(), result, request.getEmail());
         sumResultRepository.save(sumResult);
 
+        boolean emailSent = true;
         try {
             emailService.sendEmail(
                 request.getEmail(),
@@ -40,10 +41,15 @@ public class SumServiceImpl implements SumService {
                 "El resultado de " + request.getA() + " + " + request.getB() + " = " + result
             );
         } catch (EmailSendException e) {
+            emailSent = false;
             log.warn("No se pudo enviar email a {}: {}", request.getEmail(), e.getMessage());
         }
 
-        return new SumResponseDTO(result, "Result sent to " + request.getEmail());
+        String message = emailSent
+            ? "Result sent to " + request.getEmail()
+            : "Result calculated for " + request.getEmail() + " (email delivery failed)";
+
+        return new SumResponseDTO(result, message);
     }
 
     @Override
