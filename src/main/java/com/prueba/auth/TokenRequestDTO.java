@@ -1,4 +1,4 @@
-package com.prueba.dto;
+package com.prueba.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package com.prueba.service.impl;
+package com.prueba.auth;
 
-import com.prueba.service.JwtService;
+import com.prueba.auth.JwtService;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

@@ -1,4 +1,4 @@
-package com.prueba.dto;
+package com.prueba.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

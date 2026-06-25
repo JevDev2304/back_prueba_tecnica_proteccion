@@ -1,4 +1,4 @@
-package com.prueba.service;
+package com.prueba.auth;
 
 public interface JwtService {
     String generateToken();

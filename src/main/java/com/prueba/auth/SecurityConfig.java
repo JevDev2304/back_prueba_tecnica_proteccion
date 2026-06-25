@@ -1,4 +1,4 @@
-package com.prueba.config;
+package com.prueba.auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

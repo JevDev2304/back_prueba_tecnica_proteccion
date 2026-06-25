@@ -1,8 +1,8 @@
-package com.prueba.controller;
+package com.prueba.auth;
 
-import com.prueba.dto.TokenRequestDTO;
-import com.prueba.dto.TokenResponseDTO;
-import com.prueba.service.JwtService;
+import com.prueba.auth.TokenRequestDTO;
+import com.prueba.auth.TokenResponseDTO;
+import com.prueba.auth.JwtService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

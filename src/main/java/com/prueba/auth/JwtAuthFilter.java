@@ -1,6 +1,6 @@
-package com.prueba.config;
+package com.prueba.auth;
 
-import com.prueba.service.JwtService;
+import com.prueba.auth.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
