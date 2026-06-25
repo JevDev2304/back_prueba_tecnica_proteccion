@@ -1,4 +1,4 @@
-package com.prueba.auth;
+package com.prueba.auth.impl;
 
 import com.prueba.auth.JwtService;
 import io.jsonwebtoken.JwtException;
