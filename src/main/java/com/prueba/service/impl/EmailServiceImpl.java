@@ -4,7 +4,6 @@ import com.prueba.exception.EmailSendException;
 import com.prueba.service.EmailService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.ses.SesClient;
 import software.amazon.awssdk.services.ses.model.*;
 
@@ -14,12 +13,10 @@ public class EmailServiceImpl implements EmailService {
     private final SesClient sesClient;
     private final String fromEmail;
 
-    public EmailServiceImpl(@Value("${ses.from-email}") String fromEmail,
-                            @Value("${ses.region:us-east-1}") String region) {
+    public EmailServiceImpl(SesClient sesClient,
+                            @Value("${ses.from-email}") String fromEmail) {
+        this.sesClient = sesClient;
         this.fromEmail = fromEmail;
-        this.sesClient = SesClient.builder()
-                .region(Region.of(region))
-                .build();
     }
 
     @Override
