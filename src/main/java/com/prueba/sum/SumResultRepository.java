@@ -1,6 +1,6 @@
-package com.prueba.repository;
+package com.prueba.sum;
 
-import com.prueba.model.SumResult;
+import com.prueba.sum.SumResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

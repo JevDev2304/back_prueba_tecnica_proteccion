@@ -1,4 +1,4 @@
-package com.prueba.service;
+package com.prueba.shared.email;
 
 public interface EmailService {
 

@@ -1,12 +1,12 @@
-package com.prueba.service.impl;
+package com.prueba.sum.impl;
 
-import com.prueba.dto.SumRequestDTO;
-import com.prueba.dto.SumResponseDTO;
-import com.prueba.exception.EmailSendException;
-import com.prueba.model.SumResult;
-import com.prueba.repository.SumResultRepository;
-import com.prueba.service.EmailService;
-import com.prueba.service.SumService;
+import com.prueba.sum.SumRequestDTO;
+import com.prueba.sum.SumResponseDTO;
+import com.prueba.shared.exception.EmailSendException;
+import com.prueba.sum.SumResult;
+import com.prueba.sum.SumResultRepository;
+import com.prueba.shared.email.EmailService;
+import com.prueba.sum.SumService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

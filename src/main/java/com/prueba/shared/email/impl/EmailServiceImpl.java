@@ -1,7 +1,7 @@
-package com.prueba.service.impl;
+package com.prueba.shared.email.impl;
 
-import com.prueba.exception.EmailSendException;
-import com.prueba.service.EmailService;
+import com.prueba.shared.exception.EmailSendException;
+import com.prueba.shared.email.EmailService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.ses.SesClient;

@@ -1,4 +1,4 @@
-package com.prueba.exception;
+package com.prueba.shared.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;

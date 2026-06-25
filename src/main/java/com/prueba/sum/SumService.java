@@ -1,8 +1,8 @@
-package com.prueba.service;
+package com.prueba.sum;
 
-import com.prueba.dto.SumRequestDTO;
-import com.prueba.dto.SumResponseDTO;
-import com.prueba.model.SumResult;
+import com.prueba.sum.SumRequestDTO;
+import com.prueba.sum.SumResponseDTO;
+import com.prueba.sum.SumResult;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.prueba.model;
+package com.prueba.sum;
 
 import jakarta.persistence.*;
 import lombok.Getter;

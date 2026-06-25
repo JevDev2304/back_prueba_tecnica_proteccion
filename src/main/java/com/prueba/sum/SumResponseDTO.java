@@ -1,4 +1,4 @@
-package com.prueba.dto;
+package com.prueba.sum;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

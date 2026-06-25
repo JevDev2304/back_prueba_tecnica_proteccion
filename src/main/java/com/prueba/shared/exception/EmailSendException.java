@@ -1,4 +1,4 @@
-package com.prueba.exception;
+package com.prueba.shared.exception;
 
 public class EmailSendException extends RuntimeException {
 

@@ -1,9 +1,9 @@
-package com.prueba.controller;
+package com.prueba.sum;
 
-import com.prueba.dto.SumRequestDTO;
-import com.prueba.dto.SumResponseDTO;
-import com.prueba.model.SumResult;
-import com.prueba.service.SumService;
+import com.prueba.sum.SumRequestDTO;
+import com.prueba.sum.SumResponseDTO;
+import com.prueba.sum.SumResult;
+import com.prueba.sum.SumService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
