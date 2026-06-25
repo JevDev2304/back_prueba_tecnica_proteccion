@@ -38,6 +38,13 @@ ses:
   from-email: ${SES_FROM_EMAIL:jevojob@gmail.com}
   region: ${SES_REGION:us-east-1}
 
+jwt:
+  secret: ${JWT_SECRET:dev-secret-key-change-in-production-min-32-chars}
+  expiration-ms: ${JWT_EXPIRATION_MS:3600000}
+
+app:
+  password: ${APP_PASSWORD:dev-password}
+
 logging:
   level:
     com.prueba: DEBUG
