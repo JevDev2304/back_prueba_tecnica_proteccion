@@ -1,20 +1,20 @@
 spring:
   datasource:
-    # Railway provee PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD automáticamente
-    # AWS ECS usa DB_URL/DB_USER/DB_PASS como variables en la Task Definition
-    # Local: usa los defaults (localhost:5432/prueba)
-    url: ${DB_URL:jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5432}/${PGDATABASE:prueba}}
-    username: ${DB_USER:${PGUSER:postgres}}
-    password: ${DB_PASS:${PGPASSWORD:postgres}}
-    driver-class-name: org.postgresql.Driver
+    # Prioridad: DATABASE_URL (Railway) > DB_URL (AWS ECS) > H2 (local/emergencia)
+    url: ${DB_URL:jdbc:h2:mem:pruebadb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    username: ${DB_USER:sa}
+    password: ${DB_PASS:}
+    driver-class-name: ${DB_DRIVER:org.h2.Driver}
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: ${DB_DIALECT:org.hibernate.dialect.H2Dialect}
+  h2:
+    console:
+      enabled: false
 
 server:
   port: ${PORT:8080}
@@ -35,11 +35,11 @@ management:
       show-details: always
 
 ses:
-  from-email: ${SES_FROM_EMAIL:jevojob@gmail.com}
+  from-email: ${SES_FROM_EMAIL:noreply@juanespruebastecnicascolombia.com}
   region: ${SES_REGION:us-east-1}
 
 jwt:
-  secret: ${JWT_SECRET:dev-secret-key-change-in-production-min-32-chars}
+  secret: ${JWT_SECRET:dev-secret-key-change-in-production-min-32-chars!!}
   expiration-ms: ${JWT_EXPIRATION_MS:3600000}
 
 app:
